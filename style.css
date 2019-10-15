@@ -300,3 +300,18 @@ background-color: rgba(0, 102, 229, 0.9);
   margin-left: auto;
   margin-right: auto;
 }
+#loader-wrapper .loader-section {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0);
+}
+#loader-wrapper .loader-section.section-right {
+  right : 0;
+}
+#loader-wrapper .loader-section.section-left {
+  left : 0;
+}

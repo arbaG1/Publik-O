@@ -15,7 +15,7 @@
     <link rel="icon" href="img/logo.png">
     <title>Publik O</title>
   </head>
-  <body>
+  <body onload="startloader()">
     <div class="contai ml-0 mr-0">
       <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
         <a class="navbar-brand page-scroll" href="#home">
@@ -77,9 +77,6 @@
               </a>
             </div>
             <!-- sosial media -->
-
-
-            <!-- IDEA:  -->
             <div class="col-lg-12 col-md-9 col-sm-10" >
               <div class=" row organisasi mb-5 mb-5">
                 <h1 class="display-4 judul2">Our Organization</h1>
@@ -89,9 +86,6 @@
                 <p class="lead col-lg 1 mr-0">  <button type="button" class="btn btn-light btn-lg m-3">View All Organization</button></p>
               </div>
             </div>
-            <!-- IDEA:  -->
-
-
             <!-- Card -->
             <div class="concard">
               <div class="row mt-5">
@@ -139,8 +133,8 @@
                 </div>
               </div>
             </div>
-            <!-- card -->
 
+            <!-- card -->
 
             <div class="col-lg-12">
               <div class="container">
@@ -174,7 +168,6 @@
                 </div>
               </div>
             </div>
-
             <div class="col-lg-12" data-aos="fade-right"  data-aos-offset="500">
               <div class="ground" id="contact">
                 <div class=" top">
@@ -185,65 +178,72 @@
                   </p>
                   <a class="btn btn-light btn-lg mt-3" href="#" role="button">Lets Go !!</a>
                 </div>
-
               </div>
             </div>
-
-<!-- IDEA:  -->
-              <div class="container lol">
-                <div class="row">
-                  <div class="col-lg-2">
-                    <div class="lel">
-                      <h1 class="display-4 j3">Company</h1>
-                      <a href="#" class="lead lr">About</a>
-                      <a href="#" class="lead lr">Service</a>
-                      <a href="#" class="lead lr">Contact</a>
-                      <a href="#" class="lead lr">Blog</a>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="lil">
-                      <h1 class="display-4 j3">Organization</h1>
-                      <a href="#" class="lead lr">HMIF</a>
-                      <a href="#" class="lead lr">FOSSIL</a>
-                      <a href="#" class="lead lr">KOMA</a>
-                      <a href="#" class="lead lr">MAYAPALA</a>
-                      <a href="#" class="lead lr">ONEGAI</a>
-                      <a href="#" class="lead lr">BEM</a>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="lil">
-                      <h1 class="display-4 j3">Features</h1>
-                      <a href="#" class="lead lr">Feature chat</a>
-                      <a href="#" class="lead lr">Scedule</a>
-                      <a href="#" class="lead lr">Dashboard</a>
-                      <a href="#" class="lead lr">Admin account</a>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="lel">
-                      <a class="navbar-brand page-scroll" href="#home">
-                        <h1 class="d-inline-block loga">Publik</h1>
-                        <img src="img/logo.png" height="50" width="50" class="d-inline-block mb-4 ml-2" alt="">
-                      </a>
-                      <a href="#" class="lead lr">(1231)0121-2131</a>
-                      <a href="#" class="lead lr">Contact@publikO.com</a>
-                      <a href="#" class="lead lr">Amikom University Yogyakarta</a>
-                    </div>
+            <div class="container lol">
+              <div class="row">
+                <div class="col-lg-2">
+                  <div class="lel">
+                    <h1 class="display-4 j3">Company</h1>
+                    <a href="#" class="lead lr">About</a>
+                    <a href="#" class="lead lr">Service</a>
+                    <a href="#" class="lead lr">Contact</a>
+                    <a href="#" class="lead lr">Blog</a>
                   </div>
                 </div>
-
+                <div class="col-lg-3">
+                  <div class="lil">
+                    <h1 class="display-4 j3">Organization</h1>
+                    <a href="#" class="lead lr">HMIF</a>
+                    <a href="#" class="lead lr">FOSSIL</a>
+                    <a href="#" class="lead lr">KOMA</a>
+                    <a href="#" class="lead lr">MAYAPALA</a>
+                    <a href="#" class="lead lr">ONEGAI</a>
+                    <a href="#" class="lead lr">BEM</a>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="lil">
+                    <h1 class="display-4 j3">Features</h1>
+                    <a href="#" class="lead lr">Feature chat</a>
+                    <a href="#" class="lead lr">Scedule</a>
+                    <a href="#" class="lead lr">Dashboard</a>
+                    <a href="#" class="lead lr">Admin account</a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="lel">
+                    <a class="navbar-brand page-scroll" href="#home">
+                      <h1 class="d-inline-block loga">Publik</h1>
+                      <img src="img/logo.png" height="50" width="50" class="d-inline-block mb-4 ml-2" alt="">
+                    </a>
+                    <a href="#" class="lead lr">(1231)0121-2131</a>
+                    <a href="#" class="lead lr">Contact@publikO.com</a>
+                    <a href="#" class="lead lr">Amikom University Yogyakarta</a>
+                  </div>
+                </div>
               </div>
-
-
-
+            </div>
         </div>
     </div>
+
+    <!-- overlays -->
+    <div id="loader-wrapper">
+      <div id="loader">
+        <div id="loader-section section-left"></div>
+        <div id="loader-section section-right"></div>
+      </div>
+    </div>
+
     <script type="text/javascript" src="aos.js"></script>
     <!-- Optional JavaScript -->
     <script type="text/javascript">
       AOS.init();
+    </script>
+    <script type="text/javascript">
+      function startloader() {
+        document.getElementById("loader-wrapper").style.display = "block" ;
+      }
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
