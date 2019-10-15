@@ -52,6 +52,9 @@ body{
   margin-right: 19px;
   font-family: 'Open Sans', sans-serif;
 }
+.nav-link:active{
+  color: cyan;
+}
 .conten{
   width: auto;
   margin-top: 180px;
