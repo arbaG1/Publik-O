@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
   overflow: scroll;
   overflow-x: hidden;
+  zoom : 100%;
 }
 body{
    background-image: url(../img/weback.jpg);
@@ -309,5 +310,6 @@ background-color: rgba(0, 102, 229, 0.9);
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,1);
+  z-index : 1000;
+  background-color: rgba(0,0,0,0.5);
 }

@@ -17,7 +17,7 @@
     <link rel="icon" href="img/logo.png">
     <title>Publik O</title>
   </head>
-  <body>
+  <body onscroll="scrcheck()">
     <div class="contai ml-0 mr-0">
       <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
         <a class="navbar-brand page-scroll" href="#home">
@@ -29,9 +29,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav" id="nav">
-            <a class="nav-item nav-link active text-white" id="scrollorg" href="#organisasi">Organization <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link text-white" href="#about" id="scrollabout">About</a>
-            <a class="nav-item nav-link text-white page-scroll" href="#contact">Contact</a>
+            <div>
+              <a class="nav-item nav-link text-white"  id="top"><span class="fa fa-chevron-up"></span></a>
+            </div>
+            <a class="nav-item nav-link active text-white" id="scrollorg org" href="#organisasi">Organization <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link text-white" href="#about" id="scrollabout about">About</a>
+            <a class="nav-item nav-link text-white page-scroll" id="scrollcontact contact" href="#contact">Contact</a>
+            <div>
+              <a class="nav-item nav-link text-white"  id="down"><span class="fa fa-chevron-down"></span></a>
+            </div>
           </div>
         </div>
       </nav>
@@ -42,7 +48,7 @@
 
               <!--Akhir Navigasi-->
               <!-- konten -->
-              <div class="conten">
+              <div class="conten" data-aos="fade-right">
                 <h1 class="display-4 judul text-white" width="600">JOIN OUR ORGANIZATION AND IMPROVE YOUR SOFT SKILS</h1>
                 <p class="lead text-white">
                   We are a web with a lot of publik organization for you, and this good for you to improve your softs sklils. You can make another organization to but you have to make a proposal for made another organization</p>
@@ -79,7 +85,7 @@
               </a>
             </div>
             <!-- sosial media -->
-            <div class="col-lg-12 col-md-9 col-sm-10" >
+            <div class="col-lg-12 col-md-9 col-sm-10" data-aos="fade-up" data-aos-offset="300">
               <div class="organisasi mb-5 mb-5">
                 <h1 class="row display-4 judul2">Our Organization</h1>
                 <div class="row">
@@ -229,13 +235,6 @@
             </div>
         </div>
     </div>
-    <!-- <div id="loader-wrapper">
-      <div id="loader">
-        <div id="loader-section section-left"></div>
-        <div id="loader-section section-right"></div>
-      </div>
-    </div> -->
-    <!-- overlays -->
 
     <!-- Optional JavaScript -->
     <script type="text/javascript" src="js/aos.js"></script>
@@ -245,10 +244,41 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
     <script type="text/javascript">
+
+      $(document).keydown(function(e){
+        var key = e.charCode || e.keyCode;
+        if (key !== 17) {
+        } else {
+          e.preventDefault();
+        }
+      });
+      var scrposx = document.documentElement.scrollTop;
+      var scrposy = document.documentElement.scrollLeft;
       AOS.init();
-      function getscrollpos() {
-        console.log(document.documentElement.scrollTop, document.documentElement.scrollLeft);
+      function showoverlay() {
+        document.getElementById("overlay").style.display = "block";
       }
+      function hide() {
+        document.getElementById("overlay").style.display = "none";
+      }
+      $("#getscrps").click(function(){
+        console.log(document.documentElement.scrollTop);;
+      })
+      $("#top").click(function(){
+        $('html, body').animate({
+          scrollTop: document.documentElement.scrollTop - 500
+        },1, 'swing');
+      })
+      $("#down").click(function(){
+        $('html, body').animate({
+          scrollTop: document.documentElement.scrollTop + 500
+        },1, 'swing');
+      })
+      $("#scrollcontact").click(function(){
+        $('html, body').animate({
+          scrollTop: 3170.0
+        },1000, 'swing');
+      })
       $("#scrollabout").click(function(){
         $('html, body').animate({
           scrollTop: 2277.0
@@ -257,8 +287,55 @@
       $("#scrollorg").click(function(){
         $('html, body').animate({
           scrollTop: 609.0
-        },1000, 'swing');
+        },500, 'swing');
       })
+      function scrup() {
+        $('html, body').animate({
+          scrollTop: scrposx - 100
+        },1000, 'swing');
+      }
+      function scrdown() {
+        $('html, body').animate({
+          scrollTop: scrposx - 100
+        },1000, 'swing');
+      }
+      function scrcheck2() {
+        if (document.documentElement.scrollTop > 609 && document.documentElement.scrollTop < 2277 ) {
+          document.getElementById("org").style.color = "#66ffcc";
+          document.getElementById("top").style.color = "#ffffff";
+          document.getElementById("about").style.color = "#ffffff";
+          document.getElementById("contact").style.color = "#ffffff";
+          document.getElementById("down").style.color = "#ffffff";
+        }
+        else if (document.documentElement.scrollTop > 2277 && document.documentElement.scrollTop < 3220) {
+          document.getElementById("org").style.color = "#ffffff";
+          document.getElementById("top").style.color = "#ffffff";
+          document.getElementById("about").style.color = "#66ffcc";
+          document.getElementById("contact").style.color = "#ffffff";
+          document.getElementById("down").style.color = "#ffffff";
+        }
+        else {
+          document.getElementById("org").style.color = "#ffffff";
+          document.getElementById("top").style.color = "#ffffff";
+          document.getElementById("about").style.color = "#ffffff";
+          document.getElementById("contact").style.color = "#ffffff";
+          document.getElementById("down").style.color = "#ffffff";
+        }
+      }
+      function scrcheck() {
+        var batas = document.getElementById("top");
+        var bbawah = document.getElementById("down");
+        if (document.documentElement.scrollTop == 0) {
+          batas.style.display = "none"
+        }
+        else if (document.documentElement.scrollTop >= 3220) {
+          bbawah.style.display = "none"
+        }
+        else {
+          document.getElementById("top").style.display = "block";
+          document.getElementById("down").style.display = "block";
+        }
+      }
     </script>
   </body>
 

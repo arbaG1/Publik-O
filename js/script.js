@@ -10,7 +10,6 @@
        scrollTop: tujuan.offset().top - 135
      },1000, 'swing');
 
-
   //   e.preventDefault();
 
    });
