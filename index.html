@@ -8,7 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://fonts.googleapis.com/css?family=Acme|Frank+Ruhl+Libre|Montserrat:600,500,400|Open+Sans:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aos.css">
     <link rel="icon" href="img/logo.png">
     <title>Publik O</title>
   </head>
@@ -56,7 +58,7 @@
             <!-- banner -->
 
             <!-- sosial media -->
-            <div class="col-lg-2 col-md-3 col-sm-2">
+            <div class="col-lg-1 col-md-3 col-sm-2">
               <a href="#" class="navbar-brand media">
                 <div class="sm">
                   <img src="img/instragram.png" width="30" height="30" class="SM" alt="">
@@ -90,10 +92,10 @@
 
 
             <!-- Card -->
-            <div class="concard ">
+            <div class="concard">
               <div class="row mt-5">
                 <div class="col-lg-6 col-l">
-                  <div class="card position-relative" style="width: 570px;">
+                  <div class="card position-relative" style="width: 570px;" data-aos="fade-up" data-aos-duration = "4000" data-aos-offset="500">
                     <img class="card-img-top" src="img/card1.jpg" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">HMIF</h5>
@@ -103,7 +105,7 @@
                   </div>
                 </div>
                 <div class="col-lg-6 col-r">
-                    <div class="card card2" style="width: 570px;">
+                    <div class="card card2" style="width: 570px;" data-aos="fade-up" data-aos-duration = "4000" data-aos-offset="520">
                       <img class="card-img-top" src="img/card2.jpg" alt="Card image cap">
                       <div class="card-body">
                         <h5 class="card-title">KOMA</h5>
@@ -115,7 +117,7 @@
               </div>
               <div class="row mt-5">
                 <div class="col-lg-6 col-l">
-                  <div class="card position-relative" style="width: 570px;">
+                  <div class="card position-relative" style="width: 570px;" data-aos="fade-up" data-aos-duration = "4000" data-aos-offset="500">
                     <img class="card-img-top" src="img/card3.jpg" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">FOSSIL</h5>
@@ -125,7 +127,7 @@
                   </div>
                 </div>
                 <div class="col-lg-6 col-r">
-                  <div class="card card2" style="width: 570px;">
+                  <div class="card card2" style="width: 570px;" data-aos="fade-up" data-aos-duration = "4000" data-aos-offset="520">
                       <img class="card-img-top" src="img/card4.jpg" alt="Card image cap">
                       <div class="card-body">
                         <h5 class="card-title">MAYAPALA</h5>
@@ -144,25 +146,25 @@
                 <h1 class="display-4 judul3 organisasi" id="about">Prinsip Kami</h1>
                 <p class="lead ab">Publik O dibangun bertujuan untuk membantu dan memfasilitasi organisasi yang ada agar dapat lebih mudah memenagement suatu kegiatan.</p>
                 <div class="row mt-5">
-                  <div class="col-lg-6">
+                  <div class="col-lg-6" data-aos="fade-down-right" data-aos-duration = "4000" data-aos-offset="500">
                     <div class="body">
                       <h1 class="about-1">Always Update </h1>
                       <p class="lead ac">Kami menyediakan fitur fitur yang bermanfaat bagi organisasi dan akan selalu mengembangkannya agar lebih baik, dan bukan hanya itu kami akan menyediakn fitur baru setiap bulannya</p>
                     </div>
                   </div>
-                  <div class="col-lg-6">
+                  <div class="col-lg-6" data-aos="fade-down-left" data-aos-duration = "4000" data-aos-offset="500">
                     <div class="body">
                       <h1 class="about-1">Respect Feedback</h1>
                       <p class="lead ac">Feedback dari anggota - anggota organisasi selalu kami pantau dan kami pertimbangkan untuk update dan fitur yang lebih baik dan bisa di terima oleh semua organisasi dan anggota</p>
                     </div>
                   </div>
-                  <div class="col-lg-6 mt-4">
+                  <div class="col-lg-6 mt-4" data-aos="fade-up-right" data-aos-duration = "4000" data-aos-offset="300">
                     <div class="body">
                       <h1 class="about-1">Friendship </h1>
                       <p class="lead ac">Anggota yang sudah masuk dalam organisasi yang ada di publik O kami anggap teman dan kami biasanya membuat acara tahunan untuk merayakan ulang tahun publik O.</p>
                     </div>
                   </div>
-                  <div class="col-lg-6 mt-4">
+                  <div class="col-lg-6 mt-4" data-aos="fade-up-left" data-aos-duration = "4000" data-aos-offset="300">
                     <div class="body">
                       <h1 class="about-1">Purely Help</h1>
                       <p class="lead ac">Publik O awalnya diciptakan pure hanya untuk membantu para organisasi agar dapat lebih mudah memenagement sesuatu dan layanan kami 100% free siapapun bisa mendaftarkan organisasi nya di publik O</p>
@@ -179,9 +181,8 @@
                   <h1 class="display-4 mt-0">Go Join Us</h1>
                   <p class="lead">
                     Siap untuk jadi bagian dari kami? kami nggak sabar kamu bergabung bersama kami dan jadi bagian dari kami, we will have some fun!!
-                    <a class="btn btn-light btn-lg mt-3" href="#" role="button">Lets Go !!</a>
                   </p>
-
+                  <a class="btn btn-light btn-lg mt-3" href="#" role="button">Lets Go !!</a>
                 </div>
 
               </div>
@@ -238,8 +239,11 @@
 
         </div>
     </div>
-
+    <script type="text/javascript" src="aos.js"></script>
     <!-- Optional JavaScript -->
+    <script type="text/javascript">
+      AOS.init();
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
