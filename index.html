@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -17,7 +17,7 @@
     <link rel="icon" href="img/logo.png">
     <title>Publik O</title>
   </head>
-  <body onscroll="scrcheck()">
+  <body onscroll="scrcheck()" onload="focezoom()">
     <div class="contai ml-0 mr-0">
       <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
         <a class="navbar-brand page-scroll" href="#home">
@@ -29,14 +29,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav" id="nav">
-            <div>
-              <a class="nav-item nav-link text-white"  id="top"><span class="fa fa-chevron-up"></span></a>
+            <div id="top">
+              <a class="nav-item nav-link text-white"><span class="fa fa-chevron-up"></span></a>
             </div>
-            <a class="nav-item nav-link active text-white" id="scrollorg org" href="#organisasi">Organization <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link text-white" href="#about" id="scrollabout about">About</a>
-            <a class="nav-item nav-link text-white page-scroll" id="scrollcontact contact" href="#contact">Contact</a>
-            <div>
-              <a class="nav-item nav-link text-white"  id="down"><span class="fa fa-chevron-down"></span></a>
+            <a class="nav-item nav-link active text-white" id="scrollorg" href="#organisasi">Organization <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link text-white" href="#about" id="scrollabout">About</a>
+            <a class="nav-item nav-link text-white page-scroll" href="#contact">Contact</a>
+            <div id="down">
+              <a class="nav-item nav-link text-white"><span class="fa fa-chevron-down"></span></a>
             </div>
           </div>
         </div>
@@ -255,13 +255,16 @@
       var scrposx = document.documentElement.scrollTop;
       var scrposy = document.documentElement.scrollLeft;
       AOS.init();
+      function forcezoom() {
+        document.body.style.zoom="75%"
+      }
       function showoverlay() {
         document.getElementById("overlay").style.display = "block";
       }
       function hide() {
         document.getElementById("overlay").style.display = "none";
       }
-      $("#getscrps").click(function(){
+      $("#getscrpos").click(function(){
         console.log(document.documentElement.scrollTop);;
       })
       $("#top").click(function(){
@@ -274,15 +277,10 @@
           scrollTop: document.documentElement.scrollTop + 500
         },1, 'swing');
       })
-      $("#scrollcontact").click(function(){
-        $('html, body').animate({
-          scrollTop: 3170.0
-        },1000, 'swing');
-      })
       $("#scrollabout").click(function(){
         $('html, body').animate({
           scrollTop: 2277.0
-        },1000, 'swing');
+        },500, 'swing');
       })
       $("#scrollorg").click(function(){
         $('html, body').animate({
@@ -299,29 +297,6 @@
           scrollTop: scrposx - 100
         },1000, 'swing');
       }
-      function scrcheck2() {
-        if (document.documentElement.scrollTop > 609 && document.documentElement.scrollTop < 2277 ) {
-          document.getElementById("org").style.color = "#66ffcc";
-          document.getElementById("top").style.color = "#ffffff";
-          document.getElementById("about").style.color = "#ffffff";
-          document.getElementById("contact").style.color = "#ffffff";
-          document.getElementById("down").style.color = "#ffffff";
-        }
-        else if (document.documentElement.scrollTop > 2277 && document.documentElement.scrollTop < 3220) {
-          document.getElementById("org").style.color = "#ffffff";
-          document.getElementById("top").style.color = "#ffffff";
-          document.getElementById("about").style.color = "#66ffcc";
-          document.getElementById("contact").style.color = "#ffffff";
-          document.getElementById("down").style.color = "#ffffff";
-        }
-        else {
-          document.getElementById("org").style.color = "#ffffff";
-          document.getElementById("top").style.color = "#ffffff";
-          document.getElementById("about").style.color = "#ffffff";
-          document.getElementById("contact").style.color = "#ffffff";
-          document.getElementById("down").style.color = "#ffffff";
-        }
-      }
       function scrcheck() {
         var batas = document.getElementById("top");
         var bbawah = document.getElementById("down");
@@ -332,8 +307,8 @@
           bbawah.style.display = "none"
         }
         else {
-          document.getElementById("top").style.display = "block";
-          document.getElementById("down").style.display = "block";
+          document.getElementById("top").style.display = "block"
+          document.getElementById("down").style.display = "block"
         }
       }
     </script>
